@@ -1,0 +1,6 @@
+*.py
+env
+!bot.py
+*.log
+*.txt
+!data.txt
