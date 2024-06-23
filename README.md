@@ -186,6 +186,7 @@ If you have an question or something you can ask in here : [@sdsproject_chat](ht
 
 To support me you can buy me a coffee via website in below
 
+- Send IDR directly via QRIS : [https://s.id/nusanqr](https://s.id/nusanqr)
 - https://trakteer.id/fawwazthoerif/tip
 - https://sociabuzz.com/fawwazthoerif/tribe
 
