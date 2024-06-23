@@ -4,3 +4,4 @@ env
 *.log
 *.txt
 !data.txt
+!requirements.txt
