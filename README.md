@@ -1,6 +1,6 @@
 # MatchQuestTod
 
-Auto Claim for MatchQuestTod Telegram Bot
+Auto Claim for MatchQuest Telegram Bot
 
 # Table of Contents
 
@@ -9,7 +9,7 @@ Auto Claim for MatchQuestTod Telegram Bot
 - [Warning](#warning)
 - [Features](#features)
 - [How to Use](#how-to-use)
-  - [Bot Parameter Feature](#bot-parameter-feature)
+  - [About Config.json](#about-configjson)
   - [Windows](#windows)
   - [Linux](#linux)
   - [Termux](#termux)
@@ -27,19 +27,21 @@ All Risks are borne by the user!
 # Features
 
 - [x] Auto Claim
+- [x] Use Daily Booster
 - [x] Multi Account Support
 - [x] Auto Playing Game Support, see [How to Use](#how-to-use)
 
 # How to Use
 
-## Bot Parameter Feature
+## About Config.json
 
-Here some parameter to enable some feature
+Here some key parameter to enable some feature
 
-| parameter  | description                                       |
-| ---------- | ------------------------------------------------- |
-| --data     | to set custom input data file (default: data.txt) |
-| --autogame | use this for enable autoplaying game              |
+| parameter         | value        | description                           |
+| ----------------- | ------------ | ------------------------------------- |
+| use_daily_booster | (true/false) | use daily booster                     |
+| auto_play_game    | (true/false) | use this for enable auto playing game |
+
 
 ## Windows 
 
