@@ -49,7 +49,7 @@ class MatchQuestTod:
                 "uid": user["id"],
                 "first_name": user["first_name"],
                 "last_name": user["last_name"],
-                "username": user["username"],
+                "username": user.get("username"),
                 "tg_login_params": data,
             }
         )
