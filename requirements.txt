@@ -1,2 +1,3 @@
-requests
+httpx
+aiofiles
 colorama
