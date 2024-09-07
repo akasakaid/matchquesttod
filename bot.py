@@ -89,6 +89,9 @@ class MatchTod:
     async def http(self, url, headers, data=None):
         while True:
             try:
+                if not await aiofiles.ospath.exists(log_file):
+                    async with aiofiles.open(log_file, "w") as w:
+                        await w.write("")
                 logsize = await aiofiles.ospath.getsize(log_file)
                 if logsize / 1024 / 1024 > 1:
                     async with aiofiles.open(log_file, "w") as w:
@@ -167,9 +170,7 @@ class MatchTod:
             "tg_login_params": self.query,
         }
         res = await self.http(login_url, self.headers, json.dumps(login_data))
-        code = res.json().get("code")
-        if code != 200:
-            self.log(f"code : {code}, check content of http.log file for more info !")
+        if not self.check_code(res.json()):
             return False
         data = res.json().get("data", {})
         token = data.get("token")
@@ -181,6 +182,11 @@ class MatchTod:
         err = data.get("err", "")
         if "You've already made a purchase." in msg:
             return "buy"
+        if "user not found" == err:
+            self.log(
+                f"{yellow}This telegram account has not been registered with the bot."
+            )
+            return False
         if code != 200:
             self.log(f"{red}code : {code}, {(msg if msg else err)}")
             return False
@@ -240,7 +246,7 @@ class MatchTod:
             return False
         data = res.json().get("data")
         is_bot = data.get("IsBot")
-        balance = data.get("Balance")
+        balance = data.get("Balance") / 1000
         self.log(f"{green}balance : {white}{balance}")
         self.log(f"{green}bot flag : {white}{is_bot}")
         res = await self.http(daily_task_url, self.headers)
@@ -250,7 +256,12 @@ class MatchTod:
         for da in data:
             current_count = da.get("current_count")
             task_count = da.get("task_count")
+            point = da.get("point")
             dtype = da.get("type")
+            if dtype == "quiz":
+                continue
+            if balance < point:
+                continue
             if current_count == task_count:
                 continue
             buy_data = {"uid": int(uid), "type": dtype}
@@ -275,7 +286,8 @@ class MatchTod:
                 reward = data.get("reward")
                 next_claim_timestamp = (
                     data.get(
-                        "next_claim_timestamp", int(datetime.now().timestamp() * 1000)
+                        "next_claim_timestamp",
+                        (int(datetime.now().timestamp() + 1000) * 1000),
                     )
                     / 1000
                 )
@@ -404,7 +416,7 @@ async def main():
                         "auto_claim": True,
                         "auto_play_game": True,
                         "auto_solve_task": True,
-                        "game_point": {"low": 100, "high": 200},
+                        "game_point": {"low": 100, "high": 150},
                     }
                 )
             )
@@ -531,7 +543,10 @@ Menu :
                         continue
                     countdowns.append(result)
                 _end = int(datetime.now().timestamp())
-                _min = min(countdowns)
+                if len(countdowns) > 0:
+                    _min = min(countdowns)
+                else:
+                    _min = 3600
                 _total = ((_min - (_end - _start)) - _end) + 120
                 await countdown(_total)
 
