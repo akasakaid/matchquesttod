@@ -8,6 +8,7 @@ Auto Claim for MatchQuest Telegram Bot
 - [Table of Contents](#table-of-contents)
 - [Warning](#warning)
 - [Features](#features)
+- [Support](#support)
 - [How to Use](#how-to-use)
   - [Windows](#windows)
   - [Linux](#linux)
@@ -16,7 +17,6 @@ Auto Claim for MatchQuest Telegram Bot
 - [Javascript Command to Get Telegram Data for Desktop](#javascript-command-to-get-telegram-data-for-desktop)
 - [Run for 24/7](#run-for-247)
 - [Discussion](#discussion)
-- [Support](#support)
 - [Thank you \< 3](#thank-you--3)
 
 # Warning
@@ -31,6 +31,15 @@ All Risks are borne by the user!
 - [x] Multi Account Support
 - [x] Proxy Support
 - [x] Auto Playing Game Support
+
+# Support
+
+To support me you can buy me a coffee via website in below
+
+- Send IDR directly via QRIS : [https://s.id/nusanqr](https://s.id/nusanqr)
+- https://trakteer.id/fawwazthoerif/tip
+- https://sociabuzz.com/fawwazthoerif/tribe
+
 
 # How to Use
 
@@ -57,7 +66,7 @@ All Risks are borne by the user!
    python -m pip install -r requirements.txt
    ```
 
-5. Edit `data.txt`, input you data token in `data.txt`, find you token in [How to Get Data](#how-to-get-data). One line for one data account, if you want add you second account add in new line!
+5. Edit `data.txt`, input your query data in `data.txt`, find you token in [How to Get Data](#how-to-get-data). One line for one data account, if you want add you second account add in new line!
 
 6. execute the main program 
    ```
@@ -95,7 +104,7 @@ All Risks are borne by the user!
    python3 -m pip install -r requirements.txt
    ```
 
-5. Edit `data.txt`, input you data token in `data.txt`, find you token in [How to Get Data](#how-to-get-data). One line for one data account, if you want add you second account add in new line!
+5. Edit `data.txt`, input your query data in `data.txt`, find you token in [How to Get Data](#how-to-get-data). One line for one data account, if you want add you second account add in new line!
 
 6. execute the main program 
    ```
@@ -131,7 +140,7 @@ All Risks are borne by the user!
    python -m pip install -r requirements.txt
    ```
 
-5. Edit `data.txt`, input you data token in `data.txt`, find you token in [How to Get Data](#how-to-get-data). One line for one data account, if you want add you second account add in new line!
+5. Edit `data.txt`, input your query data in `data.txt`, find you token in [How to Get Data](#how-to-get-data). One line for one data account, if you want add you second account add in new line!
 
 6. execute the main program 
    ```
@@ -177,12 +186,5 @@ You can run the script bot for 24/7 using vps / rdp. You can use `screen` applic
 
 If you have an question or something you can ask in here : [@sdsproject_chat](https://t.me/sdsproject_chat)
 
-# Support
-
-To support me you can buy me a coffee via website in below
-
-- Send IDR directly via QRIS : [https://s.id/nusanqr](https://s.id/nusanqr)
-- https://trakteer.id/fawwazthoerif/tip
-- https://sociabuzz.com/fawwazthoerif/tribe
 
 # Thank you < 3
