@@ -10,6 +10,7 @@ Auto Claim for MatchQuest Telegram Bot
 - [Features](#features)
 - [Support](#support)
 - [How to Use](#how-to-use)
+  - [Proxy configuration](#proxy-configuration)
   - [Windows](#windows)
   - [Linux](#linux)
   - [Termux](#termux)
@@ -42,6 +43,34 @@ To support me you can buy me a coffee via website in below
 
 
 # How to Use
+
+## Proxy configuration
+
+If you want to use proxies you can simply add your proxy list to the `proxies.txt`` file or whatever file you want (if you use custom filenames for proxies you should call them with the additional argument --proxy and followed by the custom filename when running bot.py/main program)
+
+Here's the format for writing proxies:
+
+If using authentication:
+```text
+protocol://username:password@ipproxy:port
+```
+
+Example:
+```text
+http://user:user@69.69.69.69:8000
+socks5://user:user@69.69.69.69:8000
+```
+
+If without authentication:
+```text
+protocol://ipproxy:port
+```
+
+Example:
+```text
+http://69.69.69.69:8000
+socks5://69.69.69.69:8000
+```
 
 ## Windows 
 
