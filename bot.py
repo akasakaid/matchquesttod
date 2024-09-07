@@ -110,17 +110,20 @@ class MatchTod:
             except httpx.ProxyError:
                 proxy = self.get_random_proxy(0, israndom=True)
                 self.ses = httpx.AsyncClient(proxy=proxy)
-                self.log("proxy error")
+                self.log(f"{red}proxy error")
                 await asyncio.sleep(3)
                 continue
             except httpx.NetworkError:
-                self.log("network error !")
+                self.log(f"{red}network error !")
                 await asyncio.sleep(3)
                 continue
             except httpx.TimeoutException:
-                self.log("connection timeout !")
+                self.log(f"{red}connection timeout !")
                 await asyncio.sleep(3)
                 continue
+            except httpx.RemoteProtocolError:
+                self.log(f"{red}server disconnected without sending response")
+                await asyncio.sleep(3)
 
     def log(self, msg):
         now = datetime.now().isoformat(" ").split(".")[0]
