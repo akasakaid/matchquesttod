@@ -9,7 +9,6 @@ Auto Claim for MatchQuest Telegram Bot
 - [Warning](#warning)
 - [Features](#features)
 - [How to Use](#how-to-use)
-  - [About Config.json](#about-configjson)
   - [Windows](#windows)
   - [Linux](#linux)
   - [Termux](#termux)
@@ -32,16 +31,6 @@ All Risks are borne by the user!
 - [x] Auto Playing Game Support, see [How to Use](#how-to-use)
 
 # How to Use
-
-## About Config.json
-
-Here some key parameter to enable some feature
-
-| parameter         | value        | description                           |
-| ----------------- | ------------ | ------------------------------------- |
-| use_daily_booster | (true/false) | use daily booster                     |
-| auto_play_game    | (true/false) | use this for enable auto playing game |
-
 
 ## Windows 
 
@@ -172,8 +161,10 @@ Here some key parameter to enable some feature
 
 # Javascript Command to Get Telegram Data for Desktop
 
+Copy javascript code in below and paste to console menu in dev tool / dev mode
+
 ```javascript
-copy(Telegram.WebApp.initData)
+let x = Telegram.WebApp.initData;let y = JSON.parse(sessionStorage.__telegram__initParams).tgWebAppData;if (x === undefined) {if (y === undefined) {console.log("failed fetch query data")} else {copy(y);console.log("the data has been copied, please paste it with the ctrl + v keys")}} else {copy(x);console.log("the data has been copied, please paste it with the ctrl + v keys")}
 ```
 
 # Run for 24/7 
