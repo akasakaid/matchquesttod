@@ -27,8 +27,10 @@ All Risks are borne by the user!
 
 - [x] Auto Claim
 - [x] Use Daily Booster
+- [x] Auto Solve Task
 - [x] Multi Account Support
-- [x] Auto Playing Game Support, see [How to Use](#how-to-use)
+- [x] Proxy Support
+- [x] Auto Playing Game Support
 
 # How to Use
 
@@ -155,8 +157,8 @@ All Risks are borne by the user!
    Maybe like this sample in below
 
    ```
-   1.query_id=xxxxxxxxxx&user=xxxxxxfirst_namexxxxxlast_namexxxxxxxusernamexxxxxxxlanguage_codexxxxxxxallows_write_to_pmxxxxxxx&auth_date=xxxxxx&hash=xxxxxxxxxxxxxxxxxxxxx
-   2.query_id=xxxxxxxxxx&user=xxxxxxfirst_namexxxxxlast_namexxxxxxxusernamexxxxxxxlanguage_codexxxxxxxallows_write_to_pmxxxxxxx&auth_date=xxxxxx&hash=xxxxxxxxxxxxxxxxxxxxx
+   query_id=xxxxxxxxxx&user=xxxxxxfirst_namexxxxxlast_namexxxxxxxusernamexxxxxxxlanguage_codexxxxxxxallows_write_to_pmxxxxxxx&auth_date=xxxxxx&hash=xxxxxxxxxxxxxxxxxxxxx
+   query_id=xxxxxxxxxx&user=xxxxxxfirst_namexxxxxlast_namexxxxxxxusernamexxxxxxxlanguage_codexxxxxxxallows_write_to_pmxxxxxxx&auth_date=xxxxxx&hash=xxxxxxxxxxxxxxxxxxxxx
    ```
 
 # Javascript Command to Get Telegram Data for Desktop
